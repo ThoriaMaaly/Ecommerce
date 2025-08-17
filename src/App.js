@@ -21,7 +21,7 @@ import Wishlist from './Components/WishList/wishlist';
 import Allorders from './Components/orders/allorders';
 import Profile from './Components/Profile/profile';
 import Notfound from './Components/Not Found/Notfound';
-const router = createHashRouter([{
+const router = createBrowserRouter([{
   path: '/', element: <Layout />, children: [
     { index: true, element: <Home /> }
     , {
@@ -49,7 +49,7 @@ const router = createHashRouter([{
       path: "/shippingAddress", element: <ProtectedRoutes><ShippingAddress /></ProtectedRoutes>
     }
     , {
-      path: "allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
+      path: "/allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
     }
     , {
       path: "/wishlist", element: <ProtectedRoutes> <Wishlist></Wishlist> </ProtectedRoutes>

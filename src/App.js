@@ -49,7 +49,7 @@ const router = createHashRouter([{
       path: "/shippingAddress", element: <ProtectedRoutes><ShippingAddress /></ProtectedRoutes>
     }
     , {
-      path: "/allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
+      path: "allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
     }
     , {
       path: "/wishlist", element: <ProtectedRoutes> <Wishlist></Wishlist> </ProtectedRoutes>

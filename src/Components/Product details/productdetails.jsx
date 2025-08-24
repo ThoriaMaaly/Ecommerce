@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { cartcontext } from '../../context/cartcontext'
+import toast from 'react-hot-toast'
 function Productdetails() {
 
     const { addToCart,loading } = useContext(cartcontext)
@@ -117,6 +118,20 @@ function Productdetails() {
                     <button className='bg-main border-0 rounded-2 text-white w-100' onClick={() => {
 
                         addToCart(id)
+                          toast.error('added to cart', {
+                                    duration: 4000,
+                                    position: 'top-center',
+
+                                    // Styling
+                                    style: {background:"#6ff67dff"},
+                                    className: '',
+
+                                    // Custom Icon
+                                    icon: '👏',
+
+                                    // Change colors of success/error/loading icon
+                                    iconTheme: {
+                                    }})
                     }}>{loading?<i class="fa-solid fa-spinner spin"></i>  :'+ADD TO CART'}</button>
                 </div>
             </div>

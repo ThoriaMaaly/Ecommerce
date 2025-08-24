@@ -21,6 +21,8 @@ import Wishlist from './Components/WishList/wishlist';
 import Allorders from './Components/orders/allorders';
 import Profile from './Components/Profile/profile';
 import Notfound from './Components/Not Found/Notfound';
+import toast, { Toaster } from 'react-hot-toast';
+
 const router = createBrowserRouter([{
   path: '/', element: <Layout />, children: [
     { index: true, element: <Home /> }
@@ -53,15 +55,15 @@ const router = createBrowserRouter([{
     }
     , {
       path: "/wishlist", element: <ProtectedRoutes> <Wishlist></Wishlist> </ProtectedRoutes>
-    },{
-      path:'*',element:<Notfound/>
+    }, {
+      path: '*', element: <Notfound />
     }
 
   ]
 }])
 function App() {
   return (<>
-
+    <Toaster  />
     <Usercontext>
       <Cartcontext>
         <RouterProvider router={router}>
@@ -70,7 +72,7 @@ function App() {
       </Cartcontext>
 
     </Usercontext>
-   
+
 
   </>
 

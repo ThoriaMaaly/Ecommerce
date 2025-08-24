@@ -25,7 +25,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const router = createBrowserRouter([{
   path: '/', element: <Layout />, children: [
-    { path:"/", element: <Home /> }
+    { index:true , element: <Home /> }
     , {
       path: "/register", element: <Register />
     }

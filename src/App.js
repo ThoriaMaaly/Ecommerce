@@ -23,7 +23,7 @@ import Profile from './Components/Profile/profile';
 import Notfound from './Components/Not Found/Notfound';
 import toast, { Toaster } from 'react-hot-toast';
 
-const router = createBrowserRouter([{
+const router = createHashRouter([{
   path: '/', element: <Layout />, children: [
     { index: true, element: <Home /> }
     , {

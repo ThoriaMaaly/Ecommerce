@@ -31,19 +31,19 @@ function Navbar() {
 
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link active" aria-current="page" to="./">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/products">Products</Link>
+                <Link className="nav-link" to="./products">Products</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/cart">Cart <i className="fa-solid fa-cart-shopping"></i> </Link>
+                <Link className="nav-link" to="./cart">Cart <i className="fa-solid fa-cart-shopping"></i> </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/categories">Categeories</Link>
+                <Link className="nav-link" to="./categories">Categeories</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/wishlist">  Wish List <i className="fa-solid fa-heart fa-xl text-danger "> </i> </Link>
+                <Link className="nav-link" to="./wishlist">  Wish List <i className="fa-solid fa-heart fa-xl text-danger "> </i> </Link>
               </li>
             </ul>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -66,16 +66,16 @@ function Navbar() {
                   <span className="nav-link active" aria-current="page" onClick={logout}>Logout</span>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/profile"><i class="fa-solid fa-user"></i></Link>
+                  <Link className="nav-link" to="./profile"><i class="fa-solid fa-user"></i></Link>
                 </li></>
               
                : <>
                 
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/register">Register</Link>
+                  <Link className="nav-link active" aria-current="page" to="./register">Register</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/login">Login</Link>
+                  <Link className="nav-link" to="./login">Login</Link>
                 </li></>
               }
 

@@ -27,34 +27,34 @@ const router = createBrowserRouter([{
   path: '/', element: <Layout />, children: [
     { index:true , element: <Home /> }
     , {
-      path: "/register", element: <Register />
+      path: "./register", element: <Register />
     }
     , {
-      path: "/login", element: <Login />
+      path: "./login", element: <Login />
     }
     , {
-      path: "/profile", element: <Profile />
+      path: "./profile", element: <Profile />
     }
     , {
-      path: "/products", element: <ProtectedRoutes><Products /></ProtectedRoutes>
+      path: "./products", element: <ProtectedRoutes><Products /></ProtectedRoutes>
     }
     , {
-      path: "/productdetails/:id", element: <ProtectedRoutes><Productdetails /></ProtectedRoutes>
+      path: "./productdetails/:id", element: <ProtectedRoutes><Productdetails /></ProtectedRoutes>
     }
     , {
-      path: "/categories", element: <ProtectedRoutes><Categeories /></ProtectedRoutes>
+      path: "./categories", element: <ProtectedRoutes><Categeories /></ProtectedRoutes>
     }
     , {
-      path: "/cart", element: <ProtectedRoutes><Cart /></ProtectedRoutes>
+      path: "./cart", element: <ProtectedRoutes><Cart /></ProtectedRoutes>
     }
     , {
-      path: "/shippingAddress", element: <ProtectedRoutes><ShippingAddress /></ProtectedRoutes>
+      path: "./shippingAddress", element: <ProtectedRoutes><ShippingAddress /></ProtectedRoutes>
     }
     , {
-      path: "/allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
+      path: "./allorders", element: <ProtectedRoutes> <Allorders></Allorders></ProtectedRoutes>
     }
     , {
-      path: "/wishlist", element: <ProtectedRoutes> <Wishlist></Wishlist> </ProtectedRoutes>
+      path: "./wishlist", element: <ProtectedRoutes> <Wishlist></Wishlist> </ProtectedRoutes>
     }, {
       path: '*', element: <Notfound />
     }

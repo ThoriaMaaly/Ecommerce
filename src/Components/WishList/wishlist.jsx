@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { cartcontext } from '../../context/cartcontext';
-
+import toast from 'react-hot-toast';
 function Wishlist() {
     let { addToCart } = useContext(cartcontext)
     let [wishListProducts, setWishListProducts] = useState(null);
@@ -49,7 +49,21 @@ function Wishlist() {
                         </figure>
 
                         <button className='bg-main border-0 rounded-2 text-white' onClick={() => {
-                            addToCart(prod._id)
+                            addToCart(prod._id);
+                            toast.error('added to cart', {
+                                    duration: 4000,
+                                    position: 'top-center',
+
+                                    // Styling
+                                    style: {background:"#6ff67dff"},
+                                    className: '',
+
+                                    // Custom Icon
+                                    icon: '👏',
+
+                                    // Change colors of success/error/loading icon
+                                    iconTheme: {
+                                    }})
                         }}>+ADD TO CART</button>
                     </div>
 
